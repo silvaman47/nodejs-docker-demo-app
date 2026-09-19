@@ -19,8 +19,7 @@ pipeline {
                 // If backend is in a subfolder, wrap with: dir('backend') { ... }
                 withGradle {
                     // Ensure the wrapper has execute permissions on Linux agents
-                    sh 'chmod +x ./gradlew'
-                    sh './gradlew -v'
+                   sh 'gradle -v'
                 }
             }
         }
